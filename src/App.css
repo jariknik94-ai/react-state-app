@@ -3,24 +3,21 @@ body {
   font-family: Arial, sans-serif;
 }
 
-/* светлая тема */
 .app {
   min-height: 100vh;
   padding: 40px 20px;
   text-align: center;
-  background: linear-gradient(135deg, #667eea, #764ba2);
   color: white;
   transition: 0.3s;
 }
 
 /* тёмная тема */
 .app.dark {
-  background: linear-gradient(135deg, #1f2937, #111827);
+  filter: brightness(0.8);
 }
 
 .title {
-  margin-bottom: 30px;
-  font-size: 32px;
+  margin-bottom: 20px;
 }
 
 .container {
@@ -28,6 +25,7 @@ body {
   justify-content: center;
   gap: 20px;
   flex-wrap: wrap;
+  margin-top: 30px;
 }
 
 /* кнопка темы */
@@ -39,4 +37,10 @@ body {
   border: none;
   border-radius: 8px;
   cursor: pointer;
+}
+
+/* текст кликов */
+.click-info {
+  margin-top: 10px;
+  font-size: 18px;
 }

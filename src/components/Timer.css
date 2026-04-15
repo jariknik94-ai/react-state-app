@@ -1,0 +1,26 @@
+.timer .time {
+  font-size: 32px;
+  margin: 10px 0;
+}
+
+.timer button {
+  margin: 5px;
+  padding: 10px;
+  background: #48bb78;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.timer button:hover {
+  background: #38a169;
+}
+
+.timer input {
+  margin-top: 10px;
+  padding: 8px;
+  width: 90%;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}

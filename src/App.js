@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import Counter from "./components/Counter";
+import Timer from "./components/Timer";
+import "./App.css";
 
-function App() {
+const App = () => {
+
+  // состояние темы (светлая / тёмная)
+  const [darkMode, setDarkMode] = useState(false);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={darkMode ? "app dark" : "app"}>
+
+      {/* переключатель темы */}
+      <button className="theme-toggle" onClick={() => setDarkMode(!darkMode)}>
+        {darkMode ? "☀️ Светлая" : "🌙 Тёмная"}
+      </button>
+
+      <h1 className="title">React State App</h1>
+
+      <div className="container">
+        <Counter />
+        <Timer />
+      </div>
+
     </div>
   );
-}
+};
 
 export default App;
